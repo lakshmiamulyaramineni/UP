@@ -1,0 +1,30 @@
+5 . Write a script that finds all soft links to a specific file.
+Ans)
+
+ if (( $# == 1))
+
+then
+
+if [[ -s $1 ]]
+
+then
+
+string=$1
+
+ls -l > output
+
+grep 'string' output > output2
+
+awk '{print $2}' output2
+
+else
+
+echo "file not exist or empty"
+
+fi
+
+else
+
+echo "this script accepts only one argument 1. filename"
+
+fi
