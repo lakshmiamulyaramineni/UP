@@ -1,0 +1,15 @@
+ 1  Create a script that, given a username, finds the home directory of the user using the /etc/passwd
+file.
+if (($# == 1))
+then
+
+cat /etc/passwd > output
+
+grep $1 output | cut -f 1,6 -d:
+
+else
+
+echo "this script accepts only one argument 1.username"
+
+fi
+
