@@ -1,0 +1,32 @@
+6   Create a script that simulates the ls -l command but prints only three columns of our choice.
+Ans)
+
+ if (( $# == 3))
+
+then
+
+if [[ $1 == [1-9] && $2 == [1-9] && $3 == [1-9] ]]
+
+then
+
+ls -l> 1sout
+
+awk '{print $fieldl) field1-$1 lsout>1
+
+awk '{print $field2}' field2=$2 lsout>2
+
+awk '{print $field3}' field3=$3 lsout>3
+
+paste 1 2 3 | expand --tabs=50
+
+else
+
+echo "enter all the numeric arguments and the argument value should be less than
+
+fi
+
+else
+
+echo "enter exactly 3 column numbers"
+
+fi
