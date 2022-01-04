@@ -1,0 +1,27 @@
+In a C Program, there is only one comment format. All comments must start with an open
+comment token, /*, and end with a close comment token, */. C++ programs use the C tokens for
+comments that span several lines. Single-line comments start with two slashes (//). In either case,
+the start token can be anywhere on the line.
+Write a script to change every single-line comment in a C++ source file that uses C
+program start and end comment tokens to a single-line comment starting with a C++ single-line
+token. The comment itself is to be unchanged.
+
+Ans)
+
+#!/bin/bash
+
+if (( $# == 0 ) )
+
+then
+
+byrapardhasar
+
+sed 's+//+/*+g' cfile.c> output
+
+sed 's+\/\.+&*/+¹ output
+
+else
+
+echo "script needs zero args only"
+
+fi
