@@ -1,0 +1,17 @@
+11  . Create a script that finds all files in subdirectories that have the same filename.
+
+Ans)
+
+awk -F '/' '{
+
+f=$NF
+
+a[f] = f in a? a[f] RS $0 : $0
+
+b[f]++}
+
+END{for(x in b)
+
+if (b[x]>1)
+
+printf "Duplicate filename: %s\n%s\n",x,a[x]]' <(find. -type f)
