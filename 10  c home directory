@@ -1,0 +1,33 @@
+10   Create a script that compiles all C source files in your home directory and create executable files.
+Preparation:
+• Create at least five C source files in your home directory. The files do not have to b
+
+Ans)
+
+if(( $# == 0 ) )
+
+byrapardhasaradhi@fedora:--/usr/bin/vim compile.scr
+
+then
+
+ls -l> output
+
+awk '{print $93 output > out
+
+grep ".*\.c$" out > output2
+
+cat output2
+
+for filename in $(cat output2)
+
+do
+
+cc -o $filename.exe $filename
+
+done
+
+else
+
+echo "the program doesn't accepts any aruguments"
+
+fi
