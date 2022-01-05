@@ -1,0 +1,24 @@
+9  Create a script that finds each line in a file that contains a specified string.
+Ans)
+
+if (( $# == 2 ))
+
+then
+
+if [[ -s "$2" ]]
+
+then
+
+grep -n $1 $2
+
+else
+
+echo "The file not exist or it is empty"
+
+fi
+
+else
+
+echo "This program requires 2 arguments 1. string to be matched 2. file"
+
+fi
